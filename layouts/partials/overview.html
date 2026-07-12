@@ -34,7 +34,7 @@
         {{ range $i, $e := $cv.education }}
         <div class="{{ if gt $i 0 }}border-top color-border-secondary pt-3 mt-3{{ end }}">
           <h3 class="f3 mb-0">{{ $e.degree }}</h3>
-          <div class="text-purple text-bold f4 mb-2">{{ $e.org }} &middot; {{ $e.dates }}</div>
+          <div class="text-green text-bold f4 mb-2">{{ $e.org }} &middot; {{ $e.dates }}</div>
           <article class="markdown-body f4">
             {{ $e.intro | markdownify }}
             {{ if $e.bullets }}
@@ -58,7 +58,7 @@
         {{ range $i, $e := $cv.experience }}
         <div class="{{ if gt $i 0 }}border-top color-border-secondary pt-3 mt-3{{ end }}">
           <h3 class="f3 mb-0">{{ $e.role }}</h3>
-          <div class="text-purple text-bold f4 mb-2">{{ $e.org }} &middot; {{ $e.dates }}</div>
+          <div class="text-green text-bold f4 mb-2">{{ $e.org }} &middot; {{ $e.dates }}</div>
           <article class="markdown-body f4">
             {{ $e.intro | markdownify }}
           </article>
@@ -90,13 +90,13 @@
       <div class="Box-body p-4">
         {{ range $i, $s := $cv.skills }}
         <div class="f4 {{ if gt $i 0 }}border-top color-border-secondary pt-3 mt-3{{ end }}">
-          <span class="text-purple text-bold">{{ $s.category }}:</span>
+          <span class="text-green text-bold">{{ $s.category }}:</span>
           <span>{{ delimit $s.items ", " }}</span>
         </div>
         {{ end }}
         {{ if $cv.languages }}
         <div class="f4 border-top color-border-secondary pt-3 mt-3">
-          <span class="text-purple text-bold">Languages:</span>
+          <span class="text-green text-bold">Languages:</span>
           <ul class="mb-0">
             {{ range $cv.languages }}
             <li>{{ . }}</li>
@@ -117,13 +117,22 @@
         {{ if eq (len $pinned) 0 }}
         {{ $activities = where .Site.RegularPages "Section" "in" (slice "post") }}
         {{ end }}
-        {{ range $i, $a := $activities }}
-        <div class="{{ if gt $i 0 }}border-top color-border-secondary pt-3 mt-3{{ end }}">
-          <a class="text-bold f3" href="{{ $a.Permalink }}">{{ $a.Title }}</a>
-          <div class="text-gray f5 mt-1">{{ $a.Date.Format "January 2006" }}</div>
-          <div class="f4 mt-2">{{ $a.Summary | safeHTML }}</div>
+        <div class="d-flex flex-wrap" style="margin: 0 -8px;">
+          {{ range $a := $activities }}
+          {{ $cover := $a.Params.cover }}
+          {{ if not $cover }}{{ $cover = "/images/activities/placeholder.svg" }}{{ end }}
+          <div class="col-12 col-md-6 col-lg-4" style="padding: 0 8px 16px;">
+            <a href="{{ $a.Permalink }}" class="Box d-block width-full height-full link-gray-dark" style="overflow:hidden;">
+              <img src="{{ $cover | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">
+              <div class="p-3">
+                <div class="text-bold f4">{{ $a.Title }}</div>
+                <div class="text-gray f6 mt-1">{{ $a.Date.Format "January 2006" }}</div>
+                <div class="f5 mt-2">{{ $a.Summary | safeHTML }}</div>
+              </div>
+            </a>
+          </div>
+          {{ end }}
         </div>
-        {{ end }}
       </div>
     </div>
 

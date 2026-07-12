@@ -5,6 +5,7 @@ pin = true
 title = 'First-author paper accepted at Nature Communications'
 summary = '"To join or not to join: handling biological replicates in long-read RNA sequencing data": a framework for combining multi-sample long-read RNA-seq data, benchmarked across six transcript reconstruction tools.'
 tags = ['bioinformatics', 'long-read-sequencing', 'publication']
+cover = '/images/activities/placeholder.svg'
 +++
 
 Our paper **"To join or not to join: handling biological replicates in long-read RNA sequencing data"** has been accepted for publication in *Nature Communications* (preprint on [bioRxiv](https://doi.org/10.64898/2025.12.09.693269), 2025).

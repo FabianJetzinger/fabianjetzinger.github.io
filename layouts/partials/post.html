@@ -1,0 +1,41 @@
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-4 pt-4 mb-4">
+      <div class="container-lg px-3 px-md-4 px-lg-5">
+        <div class="d-flex flex-items-center mb-3">
+          <a class="avatar mr-2 flex-shrink-0" href="{{ .Site.BaseURL }}">
+            <img class="avatar-user"
+              src="{{ with $.Site.Params.avatar }}{{ $.Site.Params.avatar }}{{ else }}{{ "images/avatar.png" | absURL }}{{ end }}"
+              width="32" height="32"></a>
+          <a href="{{ .Site.BaseURL }}" class="link-gray-dark text-bold">{{ .Site.Params.author }}</a>
+        </div>
+        <h1 class="f1 text-bold mb-2 break-word">{{ .Title }}</h1>
+        <div class="text-gray f5">{{ .PublishDate.Format "January 2, 2006" }}</div>
+        {{ with .Params.tags }}
+        <div class="mt-3">
+          {{ range $tag := . }}
+          <a class="muted-link mr-3" href="{{ absURL (print "tags/" . | urlize) }}">
+            <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+              <path fill-rule="evenodd"
+                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+              </path>
+            </svg>
+            {{ $tag }}
+          </a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div class="Box-body px-3 px-md-5 pb-5" style="z-index: 1">
+          <article class="markdown-body entry-content container-lg f4">
+            {{- .Content -}}
+          </article>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
