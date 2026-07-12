@@ -1,0 +1,8 @@
+/* Softer, warmer accent green for institution/org lines and skill/language labels,
+   replacing the theme's saturated success-green (which read as too intense). */
+.text-accent {
+  color: #6e8b5e !important;
+}
+[data-color-mode="dark"] .text-accent {
+  color: #9cba84 !important;
+}
