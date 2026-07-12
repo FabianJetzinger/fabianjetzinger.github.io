@@ -14,3 +14,13 @@
 .hx_UnderlineNav-with-profile-color-modes-banner {
   align-items: center !important;
 }
+
+/* When scrolled, the mini avatar/name bar (#headerStuck, naturally ~48px
+   tall) and the nav-links bar (~74px tall, driven by the color-modes
+   illustration) both pin to top:0 independently. Their vertically-centered
+   content ends up at different heights unless the two bars share a height. */
+#headerStuck {
+  height: 74px;
+  display: flex !important;
+  align-items: center;
+}

@@ -22,7 +22,6 @@ pygmentsUseClasses = true
   avatar = "/images/avatar.png"
   linkedin = "fabian-jetzinger"
   cvFile = "/files/fabian-jetzinger-cv.pdf"
-  custom_css = ["css/custom.css"]
 
 [[params.links]]
   title = "Google Scholar"
