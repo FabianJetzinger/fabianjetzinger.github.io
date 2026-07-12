@@ -6,3 +6,11 @@
 [data-color-mode="dark"] .text-accent {
   color: #9cba84 !important;
 }
+
+/* The theme bottom-aligns the nav tabs against the taller color-modes
+   illustration (align-items: flex-end), which leaves an empty strip above
+   the tabs since we don't have a cover-photo banner filling that space.
+   Center everything in the bar instead so it reads as one row. */
+.hx_UnderlineNav-with-profile-color-modes-banner {
+  align-items: center !important;
+}
