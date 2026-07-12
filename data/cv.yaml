@@ -1,0 +1,63 @@
+about: |
+  Hi, I'm Fabian 👋 An industrial PhD researcher in Bioinformatics, working at the
+  intersection of long-read RNA sequencing, deep learning, and NLP. Based in
+  Valencia, Spain — open to local & remote work worldwide.
+
+education:
+  - degree: "Industrial PhD in Bioinformatics"
+    org: "BioBam Bioinformatics S.L. & University of Valencia"
+    dates: "2023 – present (expected defense Q4 2026 – Q1 2027)"
+    intro: "Fellow of the Marie Skłodowska-Curie Actions (MSCA) Doctoral Network LongTREC, in collaboration with Ana Conesa (I2SysBio)."
+    bullets:
+      - "Developed a Nextflow pipeline for benchmarking transcript reconstruction tools on long-read RNA-seq data sets with multiple biological replicates."
+      - "Independently conceived, designed, and developed **PLM2GO**, a novel deep learning method for protein function prediction (manuscript in preparation) — protein language models, AWS orchestration (S3, EC2 spot instances)."
+      - "Development, maintenance, and user support of the OmicsBox long-read transcriptomics submodule."
+  - degree: "MSc in Data Science and Engineering"
+    org: "University of Applied Sciences Upper Austria"
+    dates: "2021 – 2023"
+    intro: "Thesis: *Named Entity Recognition on German traffic-related texts*. Built a hybrid NER pipeline combining a custom rule engine with fine-tuned transformer language models and a disambiguation step, benchmarked against GPT-3."
+  - degree: "BSc in Medical and Bioinformatics"
+    org: "University of Applied Sciences Upper Austria"
+    dates: "2018 – 2021"
+    intro: "Thesis: *Dimension Reduction on Time Series Data*. Applied PCA, t-SNE, UMAP, and an autoencoder (TensorFlow/Keras) to anomaly detection in clinical time-series data."
+  - degree: "Matura Diploma (Higher Technical College for Informatics)"
+    org: "HTBLA Grieskirchen, Austria"
+    dates: "2012 – 2017"
+    intro: "Thesis: *Towards Predicting the Popularity of Music Artists*. Presented at the 10th International Workshop on Machine Learning and Music at Universitat Pompeu Fabra, Barcelona."
+
+experience:
+  - role: "Industrial PhD Student"
+    org: "BioBam Bioinformatics S.L."
+    dates: "2023 – 2026"
+    intro: "Industrial research placement as part of the MSCA Doctoral Network LongTREC — see PhD section above for project details."
+  - role: "Junior Data Scientist"
+    org: "RISC Software GmbH"
+    dates: "2021 – 2023"
+    intro: "Contributed to development of a hybrid named-entity recognition pipeline (rule-based engine + fine-tuned BERT/DistilBERT/ELECTRA transformer models, with a T5-based question-answering disambiguation step) to automate German-language traffic-incident reporting from speech-to-text data, as part of a multi-partner research project; benchmarked against GPT-3."
+  - role: "Data Science Intern"
+    org: "RISC Software GmbH"
+    dates: "2019 – 2021"
+    intro: "Applied dimension reduction techniques (PCA, t-SNE, UMAP) and deep convolutional autoencoders to real-world clinical time-series data for visualization and anomaly detection."
+
+publications:
+  - citation: "Jetzinger, F. (first author), et al. **\"To join or not to join: handling biological replicates in long-read RNA sequencing data.\"** *bioRxiv* (2025). Accepted for publication in *Nature Communications*."
+    detail: "Performed pre-processing, transcript reconstruction and benchmarking analysis across PacBio, ONT, and Illumina sequencing platforms."
+  - citation: "Liu, T., et al. **\"TUSCO: benchmarking transcriptome reconstruction with endogenous single-isoform controls.\"** *Nature Communications* (2026)."
+    detail: "Contributed to pre-processing of long-read RNA-seq data and transcript reconstruction."
+
+skills:
+  - category: "Programming"
+    items: ["Python", "R", "Bash", "Java", "C#", "C++", "MATLAB"]
+  - category: "Data Science"
+    items: ["Deep Learning (PyTorch)", "Natural Language Processing", "Quantitative Statistics", "SQL / Relational Databases", "Visual Analytics", "Big Data"]
+  - category: "Bioinformatics"
+    items: ["Analysis of short- and long-read RNA-seq data"]
+  - category: "Tools & Infrastructure"
+    items: ["Linux / WSL", "Nextflow", "HPC (SLURM)", "Cloud Computing (AWS basics)"]
+  - category: "Soft Skills"
+    items: ["Teamwork", "Leadership", "Science Communication", "Customer Support", "Public Presentations"]
+
+languages:
+  - "German: Native"
+  - "English: Full Professional Proficiency (Near-Native)"
+  - "Spanish: Conversational (B2; planning C1 certification)"

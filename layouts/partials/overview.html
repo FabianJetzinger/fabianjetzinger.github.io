@@ -1,0 +1,130 @@
+{{ define "overview" }}
+{{ $cv := site.Data.cv }}
+
+<div>
+  <div class="position-relative">
+
+    {{ with site.Params.cvFile }}
+    <div class="mt-4 d-flex flex-justify-center">
+      <a href="{{ . }}" class="btn btn-primary btn-large" download>
+        <svg class="octicon octicon-download mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" style="vertical-align:text-bottom;">
+          <path fill-rule="evenodd" d="M7.47 10.78a.75.75 0 001.06 0l3.75-3.75a.75.75 0 00-1.06-1.06L8.75 8.44V1.75a.75.75 0 00-1.5 0v6.69L4.78 5.97a.75.75 0 00-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"></path>
+        </svg>
+        Download CV (PDF)
+      </a>
+    </div>
+    {{ end }}
+
+    <div class="Box mt-4" id="about">
+      <div class="Box-header">
+        <h2 class="Box-title">About</h2>
+      </div>
+      <div class="Box-body p-4">
+        <article class="markdown-body">
+          {{ $cv.about | markdownify }}
+        </article>
+      </div>
+    </div>
+
+    <div class="Box mt-4" id="education">
+      <div class="Box-header">
+        <h2 class="Box-title">Education</h2>
+      </div>
+      <div class="Box-body p-4">
+        {{ range $i, $e := $cv.education }}
+        <div class="{{ if gt $i 0 }}border-top color-border-secondary pt-3 mt-3{{ end }}">
+          <h3 class="f4 mb-0">{{ $e.degree }}</h3>
+          <div class="text-gray f6 mb-2">{{ $e.org }} &middot; {{ $e.dates }}</div>
+          <article class="markdown-body">
+            {{ $e.intro | markdownify }}
+            {{ if $e.bullets }}
+            <ul>
+              {{ range $e.bullets }}
+              <li>{{ . | markdownify }}</li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </article>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="Box mt-4" id="experience">
+      <div class="Box-header">
+        <h2 class="Box-title">Experience</h2>
+      </div>
+      <div class="Box-body p-4">
+        {{ range $i, $e := $cv.experience }}
+        <div class="{{ if gt $i 0 }}border-top color-border-secondary pt-3 mt-3{{ end }}">
+          <h3 class="f4 mb-0">{{ $e.role }}</h3>
+          <div class="text-gray f6 mb-2">{{ $e.org }} &middot; {{ $e.dates }}</div>
+          <article class="markdown-body">
+            {{ $e.intro | markdownify }}
+          </article>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="Box mt-4" id="publications">
+      <div class="Box-header">
+        <h2 class="Box-title">Publications</h2>
+      </div>
+      <div class="Box-body p-4">
+        {{ range $i, $p := $cv.publications }}
+        <div class="{{ if gt $i 0 }}border-top color-border-secondary pt-3 mt-3{{ end }}">
+          <article class="markdown-body">
+            {{ $p.citation | markdownify }}
+            <div class="text-gray f6">{{ $p.detail }}</div>
+          </article>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="Box mt-4" id="skills">
+      <div class="Box-header">
+        <h2 class="Box-title">Skills</h2>
+      </div>
+      <div class="Box-body p-4">
+        {{ range $i, $s := $cv.skills }}
+        <div class="{{ if gt $i 0 }}border-top color-border-secondary pt-3 mt-3{{ end }}">
+          <strong>{{ $s.category }}:</strong>
+          <span class="text-gray">{{ delimit $s.items ", " }}</span>
+        </div>
+        {{ end }}
+        {{ if $cv.languages }}
+        <div class="border-top color-border-secondary pt-3 mt-3">
+          <strong>Languages:</strong>
+          <span class="text-gray">{{ delimit $cv.languages " · " }}</span>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="mt-4" id="activities">
+      <h2 class="f4 mb-2 text-normal">Activities</h2>
+      {{ $pinned := where .Site.Pages "Params.pin" true }}
+      {{ $activities := $pinned }}
+      {{ if eq (len $pinned) 0 }}
+      {{ $activities = where .Site.RegularPages "Section" "in" (slice "post") }}
+      {{ end }}
+      <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4">
+        {{ range $activities }}
+        <li class="col-12 mb-3 d-flex flex-content-stretch">
+          <div class="Box d-flex p-3 width-full">
+            <div class="width-full">
+              <a class="text-bold flex-auto min-width-0 f4" href="{{ .Permalink }}">{{ .Title }}</a>
+              <div class="text-gray text-small mt-1">{{ .Date.Format "January 2006" }}</div>
+              <div class="text-gray mt-2">{{ .Summary | safeHTML }}</div>
+            </div>
+          </div>
+        </li>
+        {{ end }}
+      </ol>
+    </div>
+
+  </div>
+</div>
+{{ end }}

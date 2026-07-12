@@ -13,12 +13,15 @@ pygmentsUseClasses = true
   url = "https://fabianjetzinger.github.io/"
   location = "Valencia, Spain"
   keywords = "bioinformatics, long-read sequencing, deep learning, NLP, data science"
-  rss = true
+  rss = false
   lastmod = true
   favicon = "/images/github-mark.png"
   headerIcon = "/images/github-mark-white.png"
-  enableSearch = true
+  enableSearch = false
   enableGitalk = false
+  avatar = "/images/avatar.png"
+  linkedin = "fabian-jetzinger"
+  cvFile = "/files/fabian-jetzinger-cv.pdf"
 
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
