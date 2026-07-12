@@ -41,7 +41,7 @@ experience:
 
 publications:
   - citation: "Jetzinger, F. (first author), et al. **\"To join or not to join: handling biological replicates in long-read RNA sequencing data.\"** *bioRxiv* (2025). Accepted for publication in *Nature Communications*."
-    detail: "Performed pre-processing, transcript reconstruction and benchmarking analysis across PacBio, ONT, and Illumina sequencing platforms."
+    detail: "Performed pre-processing, transcript reconstruction and benchmarking analysis across PacBio, ONT, and Illumina sequencing platforms to compare strategies to combine data from multiple biological replicates in long-read RNA-seq data."
   - citation: "Liu, T., et al. **\"TUSCO: benchmarking transcriptome reconstruction with endogenous single-isoform controls.\"** *Nature Communications* (2026)."
     detail: "Contributed to pre-processing of long-read RNA-seq data and transcript reconstruction."
 
@@ -49,7 +49,7 @@ skills:
   - category: "Programming"
     items: ["Python", "R", "Bash", "Java", "C#", "C++", "MATLAB"]
   - category: "Data Science"
-    items: ["Deep Learning (PyTorch)", "Natural Language Processing", "Quantitative Statistics", "SQL / Relational Databases", "Visual Analytics", "Big Data"]
+    items: ["Deep Learning (PyTorch)", "Natural Language Processing", "Quantitative Statistics", "SQL / Relational Databases", "Visualization", "Big Data"]
   - category: "Bioinformatics"
     items: ["Analysis of short- and long-read RNA-seq data"]
   - category: "Tools & Infrastructure"
