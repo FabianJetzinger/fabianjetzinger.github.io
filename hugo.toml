@@ -1,0 +1,32 @@
+baseURL = "https://fabianjetzinger.github.io/"
+locale = "en-us"
+title = "Fabian Jetzinger"
+theme = "github-style"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  author = "Fabian Jetzinger"
+  description = "PhD researcher in Bioinformatics — long-read RNA-seq, deep learning & NLP."
+  github = "FabianJetzinger"
+  email = "jetzinger.fabian@gmail.com"
+  url = "https://fabianjetzinger.github.io/"
+  location = "Valencia, Spain"
+  keywords = "bioinformatics, long-read sequencing, deep learning, NLP, data science"
+  rss = true
+  lastmod = true
+  favicon = "/images/github-mark.png"
+  headerIcon = "/images/github-mark-white.png"
+  enableSearch = true
+  enableGitalk = false
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[outputs]
+  home = ["html", "json"]
+
+[outputFormats.json]
+  mediaType = "application/json"
+  baseName = "index"
+  isPlainText = false
