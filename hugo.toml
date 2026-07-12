@@ -23,6 +23,16 @@ pygmentsUseClasses = true
   linkedin = "fabian-jetzinger"
   cvFile = "/files/fabian-jetzinger-cv.pdf"
 
+[[params.links]]
+  title = "Google Scholar"
+  href = "https://scholar.google.com/citations?hl=en&user=4tXf-NwAAAAJ"
+  icon = "/images/googlescholar.svg"
+
+[[params.links]]
+  title = "ORCID"
+  href = "https://orcid.org/0009-0000-3150-2167"
+  icon = "/images/orcid.svg"
+
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
 
