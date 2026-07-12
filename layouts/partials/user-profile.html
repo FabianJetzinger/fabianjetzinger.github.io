@@ -59,6 +59,14 @@
               </li>
               {{ end }}
 
+              <li class="vcard-detail pt-1 css-truncate css-truncate-target hide-sm hide-md">
+                <svg class="octicon octicon-globe" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c.255.426.542.832.857 1.215.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a9.927 9.927 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.507 6.507 0 0 0 4.666 5.5c-.123-.181-.24-.365-.352-.552-.715-1.192-1.437-2.874-1.581-4.948Zm-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.507 6.507 0 0 0-4.666 5.5Zm10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.507 6.507 0 0 0 4.666-5.5Zm2.733-1.5a6.507 6.507 0 0 0-4.666-5.5c.123.181.24.365.353.552.714 1.192 1.436 2.874 1.58 4.948Z">
+                  </path>
+                </svg>
+                <span class="p-label">Open to remote work</span>
+              </li>
+
               {{ if .Site.Params.email }}
               <li class="vcard-detail pt-1 css-truncate css-truncate-target ">
                 <svg class="octicon octicon-mail" viewBox="0 0 16 16" version="1.1" width="16" height="16">
@@ -70,18 +78,6 @@
               </li>
               {{ end }}
 
-              <li class="vcard-detail pt-1 css-truncate css-truncate-target ">
-                <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                  <path fill-rule="evenodd"
-                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                  </path>
-                </svg>
-                {{ if .Site.Params.url }}
-                <a rel="nofollow me" class="link-gray-dark" href="{{ .Site.Params.url }}">{{ .Site.Params.url }}</a>
-                {{ else }}
-                <a rel="nofollow me" class="link-gray-dark" href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
-                {{ end }}
-              </li>
             </ul>
           </div>
         </div>

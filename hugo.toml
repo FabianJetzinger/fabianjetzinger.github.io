@@ -7,7 +7,7 @@ pygmentsUseClasses = true
 
 [params]
   author = "Fabian Jetzinger"
-  description = "PhD researcher in Bioinformatics — long-read RNA-seq, deep learning & NLP."
+  description = "PhD student in Bioinformatics, focused on long-read RNA-seq, protein functions, and deep learning."
   github = "FabianJetzinger"
   email = "jetzinger.fabian@gmail.com"
   url = "https://fabianjetzinger.github.io/"
