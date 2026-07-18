@@ -127,6 +127,14 @@
                   <div class="f5 mt-2">{{ $item.text | markdownify }}</div>
                 </div>
               </a>
+              {{ else if $item.link }}
+              <a href="{{ $item.link }}" target="_blank" rel="noopener" class="Box d-block width-full height-full link-gray-dark" style="overflow:hidden;">
+                <img src="{{ $cover | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">
+                <div class="p-3">
+                  <div class="text-bold f4">{{ $item.title }}</div>
+                  <div class="f5 mt-2">{{ $item.text | markdownify }}</div>
+                </div>
+              </a>
               {{ else }}
               <div class="Box width-full height-full" style="overflow:hidden;">
                 <img src="{{ $cover | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">
