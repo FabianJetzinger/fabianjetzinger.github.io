@@ -1,7 +1,7 @@
 +++
 date = '2026-07-12T19:30:26+02:00'
-draft = false
-pin = true
+draft = true
+pin = false
 title = 'First-author paper accepted at Nature Communications'
 summary = '"To join or not to join: handling biological replicates in long-read RNA sequencing data": a framework for combining multi-sample long-read RNA-seq data, benchmarked across six transcript reconstruction tools.'
 tags = ['bioinformatics', 'long-read-sequencing', 'publication']
