@@ -117,19 +117,26 @@
           <h3 class="f3 mb-3">{{ $cat.name }}</h3>
           <div class="d-flex flex-wrap" style="margin: 0 -8px;">
             {{ range $item := $cat.entries }}
-            {{ $cover := default "/images/activities/placeholder.svg" $item.image }}
             <div class="col-12 col-md-6 col-lg-4" style="padding: 0 8px 16px;">
               {{ if $item.post }}
               <a href="{{ $item.post | absURL }}" class="Box d-block width-full height-full link-gray-dark" style="overflow:hidden;">
-                <img src="{{ $cover | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">
+                {{ with $item.image }}<img src="{{ . | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">{{ end }}
                 <div class="p-3">
                   <div class="text-bold f4">{{ $item.title }}</div>
                   <div class="f5 mt-2">{{ $item.text | markdownify }}</div>
                 </div>
               </a>
+              {{ else if $item.popup }}
+              <div class="Box d-block width-full height-full link-gray-dark" style="overflow:hidden; cursor:pointer;" role="button" tabindex="0" onclick="showActivityPopup(this)" onkeypress="if(event.key==='Enter'){showActivityPopup(this)}" data-popup="{{ $item.popup }}">
+                {{ with $item.image }}<img src="{{ . | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">{{ end }}
+                <div class="p-3">
+                  <div class="text-bold f4">{{ $item.title }}</div>
+                  <div class="f5 mt-2">{{ $item.text | markdownify }}</div>
+                </div>
+              </div>
               {{ else if $item.link }}
               <a href="{{ $item.link }}" target="_blank" rel="noopener" class="Box d-block width-full height-full link-gray-dark" style="overflow:hidden;">
-                <img src="{{ $cover | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">
+                {{ with $item.image }}<img src="{{ . | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">{{ end }}
                 <div class="p-3">
                   <div class="text-bold f4">{{ $item.title }}</div>
                   <div class="f5 mt-2">{{ $item.text | markdownify }}</div>
@@ -137,7 +144,7 @@
               </a>
               {{ else }}
               <div class="Box width-full height-full" style="overflow:hidden;">
-                <img src="{{ $cover | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">
+                {{ with $item.image }}<img src="{{ . | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">{{ end }}
                 <div class="p-3">
                   <div class="text-bold f4">{{ $item.title }}</div>
                   <div class="f5 mt-2">{{ $item.text | markdownify }}</div>
@@ -151,6 +158,22 @@
         {{ end }}
       </div>
     </div>
+
+    <div id="activity-popup-overlay" class="activity-popup-overlay" onclick="if (event.target === this) closeActivityPopup()">
+      <div class="Box activity-popup-box p-4">
+        <div id="activity-popup-text" class="f4 mb-3"></div>
+        <button type="button" class="btn btn-sm" onclick="closeActivityPopup()">Close</button>
+      </div>
+    </div>
+    <script>
+      function showActivityPopup(el) {
+        document.getElementById('activity-popup-text').textContent = el.getAttribute('data-popup');
+        document.getElementById('activity-popup-overlay').classList.add('is-open');
+      }
+      function closeActivityPopup() {
+        document.getElementById('activity-popup-overlay').classList.remove('is-open');
+      }
+    </script>
 
   </div>
 </div>
