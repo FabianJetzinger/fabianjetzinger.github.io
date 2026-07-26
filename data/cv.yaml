@@ -12,6 +12,7 @@ education:
       - "Developed a Nextflow pipeline for benchmarking transcript reconstruction tools on long-read RNA-seq data sets with multiple biological replicates."
       - "Independently conceived of, designed, and developed a novel deep learning method for protein function prediction, **PLM2GO** (manuscript in preparation). This involved data engineering of public protein and Gene Ontology annotation data, use of protein language models, model training and evaluation, and orchestration in AWS infrastructure (including S3 and EC2 spot instances)."
       - "Development, maintenance, and user support of the OmicsBox long-read transcriptomics submodule, making complex long-read RNA-seq analysis accessible to biologists."
+      - "Developed a **LangGraph**-based LLM agent for bioinformatic analysis within OmicsBox, helping users discuss their data, identify suitable analyses, configure and launch workflows, and interpret results — including tool calling, retrieval-augmented generation (RAG), and web search."
   - degree: "MSc in Data Science and Engineering"
     org: "University of Applied Sciences Upper Austria"
     dates: "2021 – 2023"
@@ -29,7 +30,7 @@ experience:
   - role: "Industrial PhD Student"
     org: "BioBam Bioinformatics S.L."
     dates: "2023 – 2026"
-    intro: "Industrial research placement as part of the MSCA Doctoral Network LongTREC — see PhD section above for project details."
+    intro: "Industrial research placement as part of the MSCA Doctoral Network LongTREC; see PhD section above for project details."
   - role: "Junior Data Scientist"
     org: "RISC Software GmbH"
     dates: "2021 – 2023"
@@ -40,7 +41,7 @@ experience:
     intro: "Applied dimension reduction techniques (PCA, t-SNE, UMAP) and deep convolutional autoencoders to real-world clinical time-series data for visualization and anomaly detection."
 
 publications:
-  - citation: "Jetzinger, F. (first author), et al. **\"To join or not to join: handling biological replicates in long-read RNA sequencing data.\"** *bioRxiv* (2025). Accepted for publication in *Nature Communications*."
+  - citation: "Jetzinger, F., et al. **\"To join or not to join: handling biological replicates in long-read RNA sequencing data.\"** *bioRxiv* (2025). Accepted for publication in *Nature Communications*."
     detail: "Performed pre-processing, transcript reconstruction and benchmarking analysis across PacBio, ONT, and Illumina sequencing platforms to compare strategies to combine data from multiple biological replicates in long-read RNA-seq data."
   - citation: "Liu, T., et al. **\"TUSCO: benchmarking transcriptome reconstruction with endogenous single-isoform controls.\"** *Nature Communications* (2026)."
     detail: "Contributed to pre-processing of long-read RNA-seq data and transcript reconstruction."
@@ -49,11 +50,11 @@ skills:
   - category: "Programming"
     items: ["Python", "R", "Bash", "Java", "C#", "C++", "MATLAB"]
   - category: "Data Science"
-    items: ["Deep Learning (PyTorch)", "Natural Language Processing", "Quantitative Statistics", "SQL / Relational Databases", "Visualization", "Big Data"]
+    items: ["Deep Learning (PyTorch)", "Natural Language Processing", "LLM Agents (LangGraph, Tool Calling, RAG)", "Quantitative Statistics", "SQL / Relational Databases", "Visualization", "Big Data"]
   - category: "Bioinformatics"
     items: ["Analysis of short- and long-read RNA-seq data"]
   - category: "Tools & Infrastructure"
-    items: ["Linux / WSL", "Nextflow", "HPC (SLURM)", "Cloud Computing (AWS basics)"]
+    items: ["Linux / WSL", "Nextflow", "HPC (SLURM)", "Cloud Computing (AWS, GCP basics)"]
   - category: "Soft Skills"
     items: ["Teamwork", "Leadership", "Science Communication", "Customer Support", "Public Presentations"]
 
