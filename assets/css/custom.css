@@ -44,3 +44,30 @@
   max-width: 360px;
   width: 100%;
 }
+
+/* Distinguish clickable Activities cards (post/link/popup) from plain,
+   non-interactive ones: a small corner badge (external-link or info icon)
+   plus a hover lift, so it reads at a glance without relying on cursor
+   alone (which touch devices don't have anyway). */
+.activity-card {
+  position: relative;
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+.activity-card:hover {
+  border-color: var(--color-accent-emphasis);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.activity-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}

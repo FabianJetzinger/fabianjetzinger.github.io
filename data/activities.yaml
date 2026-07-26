@@ -38,7 +38,7 @@ categories:
   - name: "Training"
     entries:
       - title: "Research Secondment: IBMCP, Valencia"
-        text: "May 2026. Secondment in the lab of Aureliano Bombarely at IBMCP (Instituto de Biología Molecular y Celular de Plantas), Valencia, working on functional annotation of *plant* proteomes."
+        text: "May 2026. Secondment in the lab of Aureliano Bombarely at IBMCP (Instituto de Biología Molecular y Celular de Plantas), Valencia, working on functional annotation of plant proteomes."
       - title: "LongTREC Final Meeting: Wrap-Up & Closing"
         text: "Closing meeting following VALT2026: ERC-style grant-proposal practice, career-planning discussions, talks on technology transfer, venture capital, and corporate values in the bioindustry, a round-table on AI for grant and paper writing, and the network's final deliverables and closing. 2–3 July 2026. Valencia, Spain."
       - title: "LongTREC Summer School in Long-Read Transcriptomics"
@@ -46,7 +46,6 @@ categories:
         link: "https://www.biobam.com/biobam-at-the-longtrec-summer-school/"
       - title: "Tutorial IP3: Genomic Variant Interpretation & Prioritisation for Clinical Research"
         text: "Workshop at ISMB/ECCB 2025. July 19, 2025."
-        link: "https://www.iscb.org/ismbeccb2025/programme-agenda/tutorials"
       - title: "Consultant: Hexaploid Sweet Potato lrRNA-seq Analysis"
         text: "April 2025 – February 2026. Consultant on a project analyzing hexaploid sweet potato long-read RNA-seq data, exploring transcript reconstruction, allele-specific expression, and fusion transcript analysis."
       - title: "LongTREC Mid-Term Meeting"

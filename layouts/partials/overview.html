@@ -119,7 +119,8 @@
             {{ range $item := $cat.entries }}
             <div class="col-12 col-md-6 col-lg-4" style="padding: 0 8px 16px;">
               {{ if $item.post }}
-              <a href="{{ $item.post | absURL }}" class="Box d-block width-full height-full link-gray-dark" style="overflow:hidden;">
+              <a href="{{ $item.post | absURL }}" class="Box activity-card d-block width-full height-full link-gray-dark" style="overflow:hidden;">
+                <span class="activity-badge" aria-hidden="true">{{ partial "activity-icon-link.html" }}</span>
                 {{ with $item.image }}<img src="{{ . | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">{{ end }}
                 <div class="p-3">
                   <div class="text-bold f4">{{ $item.title }}</div>
@@ -127,7 +128,8 @@
                 </div>
               </a>
               {{ else if $item.popup }}
-              <div class="Box d-block width-full height-full link-gray-dark" style="overflow:hidden; cursor:pointer;" role="button" tabindex="0" onclick="showActivityPopup(this)" onkeypress="if(event.key==='Enter'){showActivityPopup(this)}" data-popup="{{ $item.popup }}">
+              <div class="Box activity-card d-block width-full height-full link-gray-dark" style="overflow:hidden; cursor:pointer;" role="button" tabindex="0" onclick="showActivityPopup(this)" onkeypress="if(event.key==='Enter'){showActivityPopup(this)}" data-popup="{{ $item.popup }}">
+                <span class="activity-badge" aria-hidden="true">{{ partial "activity-icon-info.html" }}</span>
                 {{ with $item.image }}<img src="{{ . | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">{{ end }}
                 <div class="p-3">
                   <div class="text-bold f4">{{ $item.title }}</div>
@@ -135,7 +137,8 @@
                 </div>
               </div>
               {{ else if $item.link }}
-              <a href="{{ $item.link }}" target="_blank" rel="noopener" class="Box d-block width-full height-full link-gray-dark" style="overflow:hidden;">
+              <a href="{{ $item.link }}" target="_blank" rel="noopener" class="Box activity-card d-block width-full height-full link-gray-dark" style="overflow:hidden;">
+                <span class="activity-badge" aria-hidden="true">{{ partial "activity-icon-link.html" }}</span>
                 {{ with $item.image }}<img src="{{ . | absURL }}" alt="" class="width-full" style="aspect-ratio: 16/9; object-fit: cover; display:block;">{{ end }}
                 <div class="p-3">
                   <div class="text-bold f4">{{ $item.title }}</div>
