@@ -1,6 +1,7 @@
 about: |
   Industrial PhD student in Bioinformatics & Data Science, working at the intersection of long-read
-  RNA sequencing, protein functions, and deep learning.
+  RNA sequencing, protein functions, and deep learning. Particularly passionate about AI agents and
+  the responsible use of AI in bioinformatics.
 
   Based in Valencia, Spain. Open to local positions and remote work worldwide.
 
@@ -53,9 +54,9 @@ skills:
   - category: "Data Science"
     items: ["Deep Learning (PyTorch)", "Natural Language Processing", "LLM Agents (LangGraph, Tool Calling, RAG)", "Quantitative Statistics", "SQL / Relational Databases", "Visualization", "Big Data"]
   - category: "Bioinformatics"
-    items: ["Analysis of short- and long-read RNA-seq data"]
+    items: ["Analysis of short- and long-read RNA-seq data", "Protein Function Prediction", "Fusion Transcript Analysis", "Allele-Specific Expression Analysis"]
   - category: "Tools & Infrastructure"
-    items: ["Linux / WSL", "Nextflow", "HPC (SLURM)", "Cloud Computing (AWS basics)"]
+    items: ["Linux / WSL", "Nextflow", "HPC (SLURM)", "Cloud Computing (AWS basics)", "Docker / Singularity", "CI/CD", "Git / GitHub", "FAIR Principles"]
   - category: "Soft Skills"
     items: ["Teamwork", "Leadership", "Science Communication", "Customer Support", "Public Presentations"]
 
