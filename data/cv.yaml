@@ -1,7 +1,8 @@
 about: |
-  Hi, I'm Fabian 👋 An industrial PhD student in Bioinformatics & Data Science, currently working at the
-  intersection of long-read RNA sequencing, protein functions, and deep learning. Based in
-  Valencia, Spain; open to local positions & remote work worldwide.
+  Industrial PhD student in Bioinformatics & Data Science, working at the intersection of long-read
+  RNA sequencing, protein functions, and deep learning.
+
+  Based in Valencia, Spain. Open to local positions and remote work worldwide.
 
 education:
   - degree: "Industrial PhD in Bioinformatics"
@@ -12,7 +13,7 @@ education:
       - "Developed a Nextflow pipeline for benchmarking transcript reconstruction tools on long-read RNA-seq data sets with multiple biological replicates."
       - "Independently conceived of, designed, and developed a novel deep learning method for protein function prediction, **PLM2GO** (manuscript in preparation). This involved data engineering of public protein and Gene Ontology annotation data, use of protein language models, model training and evaluation, and orchestration in AWS infrastructure (including S3 and EC2 spot instances)."
       - "Development, maintenance, and user support of the OmicsBox long-read transcriptomics submodule, making complex long-read RNA-seq analysis accessible to biologists."
-      - "Developed a **LangGraph**-based LLM agent for bioinformatic analysis within OmicsBox, helping users discuss their data, identify suitable analyses, configure and launch workflows, and interpret results — including tool calling, retrieval-augmented generation (RAG), and web search."
+      - "Developed a **LangGraph**-based LLM agent for bioinformatic analysis within OmicsBox, helping users discuss their data, identify suitable analyses, configure and launch workflows, and interpret results. Implemented tool calling, retrieval-augmented generation (RAG), and web search."
   - degree: "MSc in Data Science and Engineering"
     org: "University of Applied Sciences Upper Austria"
     dates: "2021 – 2023"
